@@ -1,6 +1,6 @@
 import './styles.scss';
 import React from 'react';
-import { ReactComponent as ArrowIcon } from '../../assets/images/arrow.svg';
+import { ReactComponent as ArrowIcon } from 'core/assets/images/arrow.svg';
 
 type Props ={
     text: string;
