@@ -52,7 +52,7 @@ const ProductDetails = () => {
                             <>
                                 <h1 className="product-description-title">
                                     Descrição do Produto
-                        </h1>
+                                </h1>
                                 <p className="product-description-text">
                                     {product?.description}
                                 </p>
