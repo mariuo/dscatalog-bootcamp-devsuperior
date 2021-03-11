@@ -6,11 +6,11 @@ import Catalog from './pages/Catalog';
 import ProductDetails from './pages/Catalog/components/ProductDetails';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
-import history from './core/utils/history';
+import History from './core/utils/history';
 
 
 const Routes = () => (
-    <Router history={history}>
+    <Router history={History}>
         <Navbar />
         <Switch>
             <Route path="/" exact>
