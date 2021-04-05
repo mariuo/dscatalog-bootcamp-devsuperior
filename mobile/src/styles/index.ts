@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const deviceWidth = Dimensions.get("window").width;
 
 const colors = {
     white: "#FFFFFF",
@@ -67,6 +69,16 @@ const text = StyleSheet.create({
     productDescription:{
         fontSize: 16,
         color: colors.mediumGray,
+    },
+    loginTitle:{
+        fontSize:30,
+        color: colors.darkGray,
+        textTransform: "uppercase",
+        marginBottom: 50,
+
+    },
+    logoutText: {
+        color: colors.white,
     },
 })
 
@@ -232,8 +244,92 @@ const theme = StyleSheet.create({
         borderColor: colors.lightGray,
 
     },
+    //LOGIN PAGE
+    loginCard:{
+        width: "100%",
+        height: "100%",
+        backgroundColor: colors.white,
+        borderRadius: 20,
+        shadowColor: colors.black,
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        alignItems: "center",
+        justifyContent: "center",
+   
+    },
+    form:{
+        marginVertical:10,
+    },
+    passwordGroup:{
+        flexDirection:"row",
+        alignItems:"center",
+        marginVertical:25,
+
+    },
+    textInput:{
+        width:290,
+        height:50,
+        borderWidth:1,
+        borderColor: colors.mediumGray,
+        borderRadius: 10,
+        padding:10,
+    },
+    toggle: {
+        
     
+    },
 
 });
 
-export { colors, theme, text };
+
+const nav = StyleSheet.create({
+    leftText: {
+        color: colors.white,
+        fontWeight: "bold",
+        marginLeft: 10,
+    },
+
+    drawer:{
+        marginRight:20,
+
+    },
+    options:{
+        width: deviceWidth,
+        height: 120,
+        backgroundColor: colors.primary,
+        marginTop: 125,
+        marginRight: -20,
+        padding: 20,
+        justifyContent: "space-between"
+
+    },
+    option: {
+        paddingVertical: 5,
+    },
+    textOption:{
+        color: colors.white,
+        textTransform:"uppercase",
+
+    },
+    textActive:{
+        fontWeight: "bold",
+    },
+    logoutBtn:{
+        width:60,
+        height:30,
+        borderWidth: 1,
+        borderColor: colors.white,
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        marginRight: 10,
+
+    },
+
+    
+})
+export { colors, theme, text, nav };
