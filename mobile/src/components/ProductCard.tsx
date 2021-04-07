@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Image, View, Text, ImageSourcePropType, TouchableOpacity } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { text, theme } from '../styles';
 
 interface ProductProps {
@@ -9,19 +9,32 @@ interface ProductProps {
     name: String;
     imgUrl: ImageSourcePropType;
     price: Number;
+    role?: string;
 }
 
-const ProductCard: React.FC<ProductProps> = ({ id, name, imgUrl, price }) => {
+const ProductCard: React.FC<ProductProps> = ({ id, name, imgUrl, price, role }) => {
     const navigation = useNavigation();
     return (
-        <TouchableOpacity style={theme.productCard} onPress={() => navigation.navigate("ProductDetails",{id})}>
-            <Image source={{uri : imgUrl}} style={theme.productImg} />
+        <TouchableOpacity style={theme.productCard} onPress={() => navigation.navigate("ProductDetails", { id })}>
+            <Image source={{ uri: imgUrl }} style={theme.productImg} />
             <View style={theme.productDescription}>
                 <Text style={text.productName}>{name}</Text>
                 <View style={theme.priceContainer}>
                     <Text style={text.currency}> R$</Text>
                     <Text style={text.productPrice}> {price}</Text>
                 </View>
+                {
+                    role === 'admin' && (
+                        <View style={theme.buttonContainer}>
+                            <TouchableOpacity style={theme.deleteBtn}>
+                                <Text style={text.deleteBtn}>Excluir</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={theme.editBtn}>
+                                <Text style={text.editBtn}>Editar</Text>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }
             </View>
         </TouchableOpacity>
 
