@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, { useState, useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { View, Text, Image, TextInput } from 'react-native';
 import { text, theme } from '../styles';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import eyesOpened from '../assets/eyes-opened.png';
 import eyesClosed from '../assets/eyes-closed.png';
 import arrow from '../assets/arrow.png';
@@ -11,10 +11,10 @@ const Login: React.FC = () => {
     const navigation = useNavigation();
     const [hidePassword, setHidePassword] = useState(true);
     const [userFetchData, setUserFetchData] = useState({});
-    const [userInfo, setUserInfo] = useState({username: "", password: ""});
+    const [userInfo, setUserInfo] = useState({ username: "", password: "" });
 
-   
-    async function handleLogin () {
+
+    async function handleLogin() {
         const data = await login(userInfo);
         setUserFetchData(data);
         navigation.navigate("Dashboard");
@@ -23,54 +23,54 @@ const Login: React.FC = () => {
         <View style={theme.container}>
             <View style={theme.loginCard}>
                 <Text style={text.loginTitle}>Login</Text>
-                 <View style={theme.form}>
-                     <TextInput 
-                        placeholder="Email" 
-                        autoCapitalize="none" 
-                        keyboardType="email-address" 
+                <View style={theme.form}>
+                    <TextInput
+                        placeholder="Email"
+                        autoCapitalize="none"
+                        keyboardType="email-address"
                         style={theme.textInput}
                         value={userInfo.username}
-                        onChangeText={ (e) => {
-                                const newUserInfo = {...userInfo};
-                                newUserInfo.username = (e);
-                                setUserInfo(newUserInfo);
-                            }
+                        onChangeText={(e) => {
+                            const newUserInfo = { ...userInfo };
+                            newUserInfo.username = (e);
+                            setUserInfo(newUserInfo);
+                        }
                         }
                     />
-                     <View style={theme.passwordGroup}>
-                        <TextInput 
-                            placeholder="Senha" 
-                            autoCapitalize="none" 
+                    <View style={theme.passwordGroup}>
+                        <TextInput
+                            placeholder="Senha"
+                            autoCapitalize="none"
                             style={theme.textInput}
                             value={userInfo.password}
-                            onChangeText={ (e) => {
-                                const newUserInfo = {...userInfo};
+                            onChangeText={(e) => {
+                                const newUserInfo = { ...userInfo };
                                 newUserInfo.password = (e);
                                 setUserInfo(newUserInfo);
                             }}
                             secureTextEntry={hidePassword}
                         />
-                     <TouchableOpacity 
-                        onPress={()=> setHidePassword(!hidePassword)}
-                        style={theme.toggle}
+                        <TouchableOpacity
+                            onPress={() => setHidePassword(!hidePassword)}
+                            style={theme.toggle}
                         >
-                         <Image  source={hidePassword ? eyesOpened : eyesClosed} style={theme.eyes}/>
-                     </TouchableOpacity>
-                     </View>
-                 </View>
-                 <TouchableOpacity 
-                    style={theme.primaryButton} 
+                            <Image source={hidePassword ? eyesOpened : eyesClosed} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <TouchableOpacity
+                    style={theme.primaryButton}
                     activeOpacity={0.8}
-                    onPress={()=> handleLogin()}
+                    onPress={() => handleLogin()}
                 >
-                    <View style={theme.buttonTextContainer}>
+                    <View style={theme.textContainer}>
                         <Text style={text.primaryText}>Fazer Login</Text>
                     </View>
                     <View style={theme.arrowContainer}>
-                        <Image source={arrow}/>
+                        <Image source={arrow} />
                     </View>
 
-                 </TouchableOpacity>
+                </TouchableOpacity>
             </View>
         </View>
     );
