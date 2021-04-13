@@ -12,15 +12,19 @@ DSCatalog é uma aplicação full stack web e mobile construída durante o curso
 A aplicação consiste em um Catalog de Produtos, Categorias e Usuários com níveis de acesso.
 
 ## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
-
+![Mobile 1](https://github.com/mariuo/assets/blob/main/dscatalog/mobile_01.png) ![Mobile 2](https://github.com/mariuo/assets/blob/main/dscatalog/mobile_02.png)
+![Mobile 3](https://github.com/mariuo/assets/blob/main/dscatalog/mobile_03.png)
 ## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
+![Web 1](https://github.com/mariuo/assets/blob/main/dscatalog/web_01.png)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+![Web 2](https://github.com/mariuo/assets/blob/main/dscatalog/web_02.png)
+
+![Web 3](https://github.com/mariuo/assets/blob/main/dscatalog/web_04.png)
+
+![Web 4](https://github.com/mariuo/assets/blob/main/dscatalog/web_05.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/mariuo/assets/blob/main/dscatalog/modelo_conceitual.png)
 
 # Tecnologias utilizadas
 ## Back end
