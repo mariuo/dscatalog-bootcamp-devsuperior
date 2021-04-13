@@ -25,6 +25,7 @@ A aplicação consiste em um Catalog de Produtos, Categorias e Usuários com ní
 ![Modelo Conceitual](https://github.com/mariuo/assets/blob/main/dscatalog/modelo_conceitual.png)
 
 # Tecnologias utilizadas
+## Arquitetura MVC, Rest
 ## Back end
 - Java
 - Spring Boot
