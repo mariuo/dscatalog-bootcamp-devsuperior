@@ -45,7 +45,7 @@ DSCatalog is a full stack web and mobile application built during the full cours
 ## Production
 - Back end: Heroku
 - Front end web: Netlify
-- Banco de dados: Postgresql
+- DataBase: Postgresql
 
 # How execute the project
 
