@@ -1,13 +1,12 @@
 # DSCatalog
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/mariuo/dscatalog-bootcamp-devsuperior/blob/main/LICENSE) 
 
-# Sobre o projeto
+# About the project
 
 https://mario-dscatalog.netlify.app
 
-DSCatalog é uma aplicação full stack web e mobile construída durante o curso completo pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+DSCatalog is a full stack web and mobile application built during the full course by [DevSuperior](https://devsuperior.com "Site da DevSuperior"). The application consists of a Catalog of Products, Categories and Users with access levels.
 
-A aplicação consiste em um Catalog de Produtos, Categorias e Usuários com níveis de acesso.
 
 ## Layout mobile
 ![Mobile 1](https://github.com/mariuo/assets/blob/main/dscatalog/mobile_01.png) ![Mobile 2](https://github.com/mariuo/assets/blob/main/dscatalog/mobile_02.png)
@@ -21,11 +20,11 @@ A aplicação consiste em um Catalog de Produtos, Categorias e Usuários com ní
 
 ![Web 4](https://github.com/mariuo/assets/blob/main/dscatalog/web_05.png)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/mariuo/assets/blob/main/dscatalog/modelo_conceitual.png)
+## Model
+![Conceptual model](https://github.com/mariuo/assets/blob/main/dscatalog/modelo_conceitual.png)
 
-# Tecnologias utilizadas
-## Arquitetura MVC, Rest
+# Technologies
+## MVC, Rest
 ## Back end
 - Java
 - Spring Boot
@@ -43,45 +42,45 @@ A aplicação consiste em um Catalog de Produtos, Categorias e Usuários com ní
 - Expo
 - Node.Js, Npm, Yarn, Visual Studio Code, Postman
 
-## Implantação em produção
+## Production
 - Back end: Heroku
 - Front end web: Netlify
 - Banco de dados: Postgresql
 
-# Como executar o projeto
+# How execute the project
 
 ## Back end
 Pré-requisitos: Java 11
 
 ```bash
-# clonar repositório
+# Clone repository
 git clone https://github.com/devsuperior/dscatalog-bootcamp-devsuperior
 
-# entrar na pasta do projeto back end
+# Get into back end
 cd backend
 
-# executar o projeto
+# Run
 ./mvnw spring-boot:run
 ```
 
 ## Front end web
-Pré-requisitos: npm / yarn
+Prerequisites: npm / yarn
 
 ```bash
-# clonar repositório
+# Clone repository
 git clone https://github.com/devsuperior/dscatalog-bootcamp-devsuperior
 
-# entrar na pasta do projeto front end web
+# Get into front end web
 cd front-web
 
-# instalar dependências
+# Install dependences
 yarn install
 
-# executar o projeto
+# Run the project
 yarn start
 ```
 
-# Autor
+# Author
 
 Mario Camelo
 https://www.linkedin.com/in/mario-camelo
