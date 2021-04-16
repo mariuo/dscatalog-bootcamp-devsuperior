@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
         <View>
             <TabBar screen={screen} setScreen={setScreen}/>
             {screen === "products" && <Products setScreen={setScreen} />}
-            {screen === "newProduct" && <FormProduct />}
+            {screen === "newProduct" && <FormProduct setScreen={setScreen}/>}
             {screen === "categories" && <Categories />}
             {screen === "users" && <Users />}
         </View>
