@@ -40,6 +40,22 @@ export async function deleteProduct(id: number){
         },
     });
 }
+
+export async function getProduct(id: number){
+    const res = await api.get(`/products/${id}`);
+    return res;
+}
+
+export async function updateProduct(data: object){
+    const authToken = await userToken();
+    const res = await api.put(`/products/${data.id}`, data, {
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+
+        }
+    })
+    return res;
+}
 // Image Upload
 export async function uploadImage(image:string) {
     if (!image) return;
