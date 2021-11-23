@@ -54,7 +54,7 @@ Pré-requisitos: Java 11
 
 ```bash
 # Clone repository
-git clone https://github.com/devsuperior/dscatalog-bootcamp-devsuperior
+git clone https://github.com/mariuo/dscatalog-bootcamp-devsuperior
 
 # Get into back end
 cd backend
@@ -68,7 +68,7 @@ Prerequisites: npm / yarn
 
 ```bash
 # Clone repository
-git clone https://github.com/devsuperior/dscatalog-bootcamp-devsuperior
+git clone https://github.com/mariuo/dscatalog-bootcamp-devsuperior
 
 # Get into front end web
 cd front-web
