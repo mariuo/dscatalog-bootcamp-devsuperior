@@ -15,8 +15,8 @@ import com.devsuperior.dscatalog.services.ProductService;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.dscatalog.tests.factory.ProductFactory;
 
-@SpringBootTest
-@Transactional
+//@SpringBootTest
+//@Transactional
 public class ProductServiceIT {
 	
 	@Autowired

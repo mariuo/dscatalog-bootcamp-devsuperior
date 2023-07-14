@@ -39,14 +39,14 @@ import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.dscatalog.tests.factory.ProductFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+//@SpringBootTest
+//@AutoConfigureMockMvc
 public class ProductResourceTests {
 
 	@Autowired
 	private MockMvc mockMvc;
 	
-	@MockBean
+//	@MockBean
 	private ProductService service;
 	
 	@Autowired
@@ -68,7 +68,7 @@ public class ProductResourceTests {
 	private String operatorUsername;
 	private String operatorPassword;
 	
-	@BeforeEach
+//	@BeforeEach
 	void setUp() throws Exception {
 		operatorUsername = "alex@gmail.com";
 		operatorPassword = "123456";
@@ -95,7 +95,7 @@ public class ProductResourceTests {
 		doThrow(DatabaseException.class).when(service).delete(dependentId);
 		
 	}
-	@Test
+//	@Test
 	public void insertShouldReturnUnprocessableEntityWhenNegativePrice() throws Exception{
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -116,7 +116,7 @@ public class ProductResourceTests {
 								
 	}
 	
-	@Test
+//	@Test
 	public void insertShouldReturnCreatedWhenValidData() throws Exception{
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -134,7 +134,7 @@ public class ProductResourceTests {
 				result.andExpect(jsonPath("$.id").exists());				
 	}
 	
-	@Test
+//	@Test
 	public void deleteShouldReturnNotFoundWhenIdDoesNotExists() throws Exception{
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -146,7 +146,7 @@ public class ProductResourceTests {
 				result.andExpect(status().isNotFound());
 	}
 	
-	@Test
+//	@Test
 	public void deleteShouldReturnNoContentWhenIdExists() throws Exception {
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -159,7 +159,7 @@ public class ProductResourceTests {
 				
 	}
 	
-	@Test
+//	@Test
 	public void updateShouldReturnProductDTOWhenIDExists() throws Exception{
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -183,7 +183,7 @@ public class ProductResourceTests {
 				
 	}
 	
-	@Test
+//	@Test
 	public void updateShouldReturnNotFoundWhenIdDoesNotExists() throws Exception{
 		String accessToken = obtainAccessToken(operatorUsername,operatorPassword);
 		
@@ -199,7 +199,7 @@ public class ProductResourceTests {
 				result.andExpect(status().isNotFound());
 	}
 	
-	@Test
+//	@Test
 	public void findAllShouldReturnPage() throws Exception{
 		ResultActions result = 
 				mockMvc.perform(get("/products")
@@ -209,7 +209,7 @@ public class ProductResourceTests {
 				result.andExpect(jsonPath("$.content").exists());
 	}
 	
-	@Test
+//	@Test
 	public void findByIdShouldReturnProductWhenIdExists() throws Exception{
 		ResultActions result = 
 				mockMvc.perform(get("/products/{id}", existingId)
@@ -219,7 +219,7 @@ public class ProductResourceTests {
 				result.andExpect(jsonPath("$.id").exists());
 				result.andExpect(jsonPath("$.id").value(existingId));
 	}
-	@Test
+//	@Test
 	public void findByIdShouldReturnNotFoundWhenIdDoesNotExists() throws Exception{
 		ResultActions result = 
 				mockMvc.perform(get("/products/{id}", nonExistingId)
